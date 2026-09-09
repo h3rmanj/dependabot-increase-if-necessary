@@ -1,0 +1,11 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    # leave version requirements untouched when the existing range already
+    # allows the new version, so wide peerDependencies ranges of published
+    # packages aren't narrowed on every bump
+    versioning-strategy: increase-if-necessary
+    schedule:
+      interval: "monthly"
